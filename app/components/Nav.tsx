@@ -15,12 +15,13 @@ type NavProps = {
   logoSrc?: string;
   logoClassName?: string;
   transparent?: boolean;
+  darkBg?: boolean;
   links?: NavLink[];
 };
 
 const DEFAULT_LINKS: NavLink[] = [
   { label: "Home", href: "/" },
-  { label: "How It Works", href: "#" },
+  { label: "How It Works", href: "/how-it-works" },
   { label: "Customer Stories", href: "#" },
   { label: "About", href: "/about-us" },
 ];
@@ -29,6 +30,7 @@ export default function Nav({
   logoSrc = "/logo.svg",
   logoClassName = "h-8 w-auto sm:h-10",
   transparent = false,
+  darkBg = false,
   links = DEFAULT_LINKS,
 }: NavProps) {
   const pathname = usePathname();
@@ -51,23 +53,25 @@ export default function Nav({
 
   const isInternal = (href: string) => href.startsWith("/");
 
+  const lightText = !transparent || darkBg;
+
   const linkBase = "inline-flex items-center gap-1.5 text-[20px] tracking-[-0.4px] transition-colors";
-  const activeColor = transparent ? "font-semibold text-ink" : "font-semibold text-white";
-  const inactiveColor = transparent
-    ? "font-normal text-ink/60 hover:text-ink"
-    : "font-normal text-white/70 hover:text-white";
+  const activeColor = lightText ? "font-semibold text-white" : "font-semibold text-ink";
+  const inactiveColor = lightText
+    ? "font-normal text-white/70 hover:text-white"
+    : "font-normal text-ink/60 hover:text-ink";
 
   const mobileLinkBase = "inline-flex items-center gap-2 text-2xl tracking-[-0.4px] transition-colors";
 
   const ctaClasses = `hidden lg:inline-flex items-center gap-3 rounded-[2px] bg-white px-4 py-3 font-mono text-[16px] font-semibold uppercase tracking-[-0.36px] text-ink transition-all hover:-translate-y-px hover:bg-gray-100 sm:px-6 sm:py-3.5 sm:text-[18px] ${
-    transparent ? "border border-[#0D0E13]/20" : ""
+    transparent && !darkBg ? "border border-[#0D0E13]/20" : ""
   }`;
 
   const ctaArrowStroke = "#0D0E13";
-  const hamburgerColor = transparent ? "bg-ink" : "bg-white";
-  const hamburgerBtnColor = transparent
-    ? "text-ink hover:bg-ink/10"
-    : "text-white hover:bg-white/10";
+  const hamburgerColor = lightText ? "bg-white" : "bg-ink";
+  const hamburgerBtnColor = lightText
+    ? "text-white hover:bg-white/10"
+    : "text-ink hover:bg-ink/10";
 
   return (
     <nav

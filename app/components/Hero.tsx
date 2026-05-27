@@ -113,9 +113,11 @@ export default function Hero() {
           src="/Hero Bg image.png"
           alt="Team collaborating with growth metrics"
           width={1400}
-          height={500}
+          height={1400}
           className="pointer-events-none hidden h-auto w-full lg:block"
           priority
+          quality={95}
+          sizes="100vw"
         />
       </div>
     </div>
