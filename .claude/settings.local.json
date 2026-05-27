@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(cat C:\\\\\\\\Users\\\\\\\\amayt\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\claude\\\\\\\\C--Users-amayt-OneDrive-Desktop-work-in-prog-javm-web\\\\\\\\758a0b99-e4e1-42d1-a824-ffc5949beadd\\\\\\\\tasks\\\\\\\\beor13vrz.output)",
+      "WebFetch(domain:localhost)",
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(taskkill //F //PID 25280)",
+      "Bash(curl -s \"http://localhost:3000/_next/static/chunks/%5Broot-of-the-server%5D__0ee6ng8._.css\")",
+      "mcp__claude_ai_Figma__get_design_context",
+      "Bash(curl *)",
+      "mcp__claude_ai_Figma__get_metadata",
+      "mcp__claude_ai_Figma__get_screenshot",
+      "PowerShell(Get-NetTCPConnection *)",
+      "Bash(npx tsc *)",
+      "Read(//tmp/**)",
+      "Bash(node *)"
+    ]
+  }
+}

@@ -1,26 +1,47 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-background: #0d0e13;
+  --color-foreground: #ffffff;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --color-brand-orange: #f93f28;
+  --color-brand-blue: #0130ba;
+  --color-deep-blue: #001e8c;
+  --color-mint: #b7f3e2;
+  --color-ink: #0d0e13;
+
+  --color-grad-0: #0d0e13;
+  --color-grad-26: #050170;
+  --color-grad-44: #0130ba;
+  --color-grad-63: #003cfc;
+  --color-grad-100: #5fc7fc;
+
+  --font-sans: var(--font-outfit), system-ui, sans-serif;
+
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-fade-in: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-progress-bar: progressBar 10s linear forwards;
+  --animate-progress-bar-5s: progressBar 5s linear forwards;
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes progressBar {
+    from { width: 0%; }
+    to { width: 100%; }
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
 }
