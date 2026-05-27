@@ -14,7 +14,8 @@
       "PowerShell(Get-NetTCPConnection *)",
       "Bash(npx tsc *)",
       "Read(//tmp/**)",
-      "Bash(node *)"
+      "Bash(node *)",
+      "Bash(git *)"
     ]
   }
 }

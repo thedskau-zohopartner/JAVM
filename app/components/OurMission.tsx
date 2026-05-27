@@ -5,13 +5,16 @@ export default function OurMission() {
   return (
     <section className="w-full px-4 pt-8 sm:px-6 sm:pt-10 lg:px-8 lg:pt-12">
       <div className="mx-auto w-full max-w-[1400px] rounded-md bg-[#071637] px-6 py-14 sm:px-12 sm:py-20 lg:px-20 lg:py-24">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          <div className="flex flex-col gap-10 text-white">
-            <SectionTag variant="dark">Our Mission &amp; vision</SectionTag>
+        <div className="grid grid-cols-1 items-stretch gap-12 lg:grid-cols-2 lg:gap-16">
+          <div className="flex flex-col justify-between gap-10 text-white">
+            <SectionTag variant="dark" className="self-start">
+              Our Mission &amp; vision
+            </SectionTag>
 
-            <div className="flex flex-col gap-6 text-lg leading-relaxed sm:text-xl lg:text-2xl">
-              <p>
-                <span className="font-medium">
+
+            <div className="flex flex-col gap-4 text-xl leading-snug sm:text-2xl lg:text-3xl">
+              <p className="leading-snug">
+                <span className="font-normal">
                   Our mission is to empower your business to lead your market.
                 </span>{" "}
                 <span className="font-light text-white/65">
@@ -19,8 +22,8 @@ export default function OurMission() {
                   business into a market leader.
                 </span>
               </p>
-              <p>
-                <span className="font-medium">
+              <p className="leading-snug">
+                <span className="font-normal">
                   Every founder deserves to see their vision scale,
                 </span>{" "}
                 <span className="font-light text-white/65">
@@ -29,9 +32,10 @@ export default function OurMission() {
                 </span>
               </p>
             </div>
+       
           </div>
 
-          <figure className="relative overflow-hidden rounded-sm">
+          <figure className="overflow-hidden rounded-sm">
             <Image
               src="/about-us/Our Mission - founder image.png"
               alt="James Musa and Jarrod Musa, founders of JAVM Partners"
@@ -39,9 +43,6 @@ export default function OurMission() {
               height={900}
               className="block h-auto w-full"
             />
-            <figcaption className="absolute bottom-3 left-3 inline-flex items-center rounded-sm bg-black/45 px-3 py-1.5 font-mono text-xs text-white/90 backdrop-blur-sm sm:text-sm">
-              The JAVM Partners
-            </figcaption>
           </figure>
         </div>
       </div>
