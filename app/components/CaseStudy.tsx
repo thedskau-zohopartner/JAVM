@@ -174,7 +174,7 @@ export default function CaseStudy() {
                 </header>
 
                 <div className="flex items-baseline gap-2">
-                  <span className="text-[65.52px] font-medium leading-[86px] tracking-[-0.04em] text-[#0B1956] sm:text-7xl sm:leading-[0.9] sm:tracking-[-2px] lg:text-9xl">
+                  <span className="text-[65.52px] font-medium leading-[86px] tracking-[-0.04em] text-[#0B1956] sm:text-9xl sm:leading-[0.9] sm:tracking-[-2px]">
                     {stat.value}
                   </span>
                   <span className="text-[40px] font-medium leading-10 text-[#0B1956]/50 sm:text-6xl sm:font-semibold sm:text-[#7E86A2]">
