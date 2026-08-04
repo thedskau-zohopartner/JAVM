@@ -1,3 +1,9 @@
+import Reveal from "./Reveal";
+
+/* pair with a `transition-[...]` that includes transform + opacity */
+const RISE =
+  "translate-y-6 opacity-0 duration-700 ease-out group-data-[revealed=true]:translate-y-0 group-data-[revealed=true]:opacity-100 motion-reduce:transition-none";
+
 type Outcome = {
   title: string;
   description: string;
@@ -98,8 +104,10 @@ export default function WhatClientExperience() {
   return (
     <section className="relative w-full overflow-hidden bg-[#050170]">
       <div className="relative mx-auto flex w-full max-w-350 flex-col gap-16 px-4 py-20 sm:px-8 sm:py-24 lg:gap-24 lg:px-20 lg:py-25">
-        <div className="flex flex-col gap-6 lg:pl-5">
-          <div className="inline-flex w-fit items-center gap-3 self-start bg-white/10 px-3.5 py-1.5 text-sm leading-[1.6] tracking-[-0.02em] text-white">
+        <Reveal className="flex flex-col gap-6 lg:pl-5">
+          <div
+            className={`inline-flex w-fit items-center gap-3 self-start bg-white/10 px-3.5 py-1.5 text-sm leading-[1.6] tracking-[-0.02em] text-white transition-[transform,opacity] ${RISE}`}
+          >
             <span
               aria-hidden
               className="block h-2.5 w-2.5 shrink-0 rounded-[1px] bg-white/80"
@@ -107,20 +115,26 @@ export default function WhatClientExperience() {
             What clients experience
           </div>
 
-          <h2 className="max-w-[20ch] text-4xl font-medium leading-tight tracking-tight text-white sm:text-5xl lg:text-[56px] lg:leading-[60px]">
+          <h2
+            style={{ transitionDelay: "120ms" }}
+            className={`max-w-[20ch] text-4xl font-medium leading-tight tracking-tight text-white sm:text-5xl lg:text-[56px] lg:leading-[60px] ${RISE}`}
+          >
             What changes inside the business and how fast.
           </h2>
-        </div>
+        </Reveal>
 
-        <div className="rounded-[4px] bg-white/10">
+        <Reveal className="rounded-[4px] bg-white/10">
           <div className="grid w-full grid-cols-1 sm:grid-cols-2">
-            {OUTCOMES.map((o) => (
+            {OUTCOMES.map((o, i) => (
               <article
                 key={o.title}
-                className="flex min-h-65 flex-col justify-between gap-8 border-white/15 p-8 sm:min-h-80 sm:p-10 [&:not(:first-child)]:border-t sm:[&:nth-child(2)]:border-t-0 sm:[&:nth-child(2n)]:border-l"
+                style={{ transitionDelay: `${i * 110}ms` }}
+                className={`group/card flex min-h-65 flex-col justify-between gap-8 border-white/15 p-8 transition-[transform,opacity,background-color] hover:bg-white/[0.06] sm:min-h-80 sm:p-10 [&:not(:first-child)]:border-t sm:[&:nth-child(2)]:border-t-0 sm:[&:nth-child(2n)]:border-l ${RISE}`}
               >
-                <div className="inline-flex h-12 w-12 items-center justify-center rounded-[4px] bg-white/20 text-white sm:h-14 sm:w-14">
-                  {o.icon}
+                <div className="inline-flex h-12 w-12 items-center justify-center rounded-[4px] bg-white/20 text-white transition duration-500 ease-out group-hover/card:-translate-y-0.5 group-hover/card:bg-white/30 sm:h-14 sm:w-14">
+                  <span className="transition-transform duration-500 ease-out group-hover/card:scale-110">
+                    {o.icon}
+                  </span>
                 </div>
 
                 <div className="flex flex-col gap-4">
@@ -133,9 +147,8 @@ export default function WhatClientExperience() {
                 </div>
               </article>
             ))}
-       
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
