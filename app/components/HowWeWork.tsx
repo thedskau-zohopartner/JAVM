@@ -103,10 +103,13 @@ const STEPS: Step[] = [
 
 const SECTION_PADDING_X = "px-6 sm:px-12 md:px-20 lg:px-32 xl:px-48";
 const ROW_PADDING_L =
-  "pl-6 sm:pl-12 md:pl-20 lg:pl-[21.125rem] xl:pl-[25.125rem]";
+  "pl-0 sm:pl-12 md:pl-20 lg:pl-[21.125rem] xl:pl-[25.125rem]";
 
+/* one phase per screen on mobile */
 const CARD_WIDTH_CLASSES =
-  "w-[70vw] sm:w-[calc((100vw_-_4.75rem)*0.85/2)] md:w-[calc((100vw_-_6.75rem)*0.85/2)] lg:w-[calc((100vw_-_11.5rem)*0.85/3)] xl:w-[calc((100vw_-_15.5rem)*0.85/3)]";
+  "w-screen sm:w-[calc((100vw_-_4.75rem)*0.85/2)] md:w-[calc((100vw_-_6.75rem)*0.85/2)] lg:w-[calc((100vw_-_11.5rem)*0.85/3)] xl:w-[calc((100vw_-_15.5rem)*0.85/3)]";
+
+const ROW_GAP = "gap-0 sm:gap-7";
 
 export default function HowWeWork() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -216,7 +219,7 @@ export default function HowWeWork() {
               ref={rowWrapRef}
               className="flex flex-col gap-10 lg:will-change-transform"
             >
-              <div className={`flex gap-7 ${ROW_PADDING_L}`}>
+              <div className={`flex ${ROW_GAP} ${ROW_PADDING_L}`}>
                 {STEPS.map((step, idx) => {
                   const isActive = idx <= activeIndex;
                   return (
@@ -258,7 +261,7 @@ export default function HowWeWork() {
                 })}
               </div>
 
-              <div className={`flex gap-7 ${ROW_PADDING_L}`}>
+              <div className={`flex ${ROW_GAP} ${ROW_PADDING_L}`}>
                 {STEPS.map((step, idx) => {
                   const isCurrent = idx === activeIndex;
                   const isCompleted = idx < activeIndex;
@@ -266,7 +269,7 @@ export default function HowWeWork() {
                   return (
                     <div
                       key={step.label}
-                      className={`flex flex-none flex-col gap-5 ${CARD_WIDTH_CLASSES}`}
+                      className={`flex flex-none flex-col gap-5 px-6 sm:px-0 ${CARD_WIDTH_CLASSES}`}
                     >
                       <div className="flex items-center gap-3">
                         <span

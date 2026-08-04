@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 type Outcome = {
   title: string;
   description: string;
@@ -98,44 +96,38 @@ const OUTCOMES: Outcome[] = [
 
 export default function WhatClientExperience() {
   return (
-    <section className="relative w-full overflow-hidden bg-ink">
-      <Image
-        src="/how-it-works/whatclientexp.png"
-        alt=""
-        fill
-        sizes="100vw"
-        quality={95}
-        className="object-cover object-top"
-      />
-
-      <div className="relative mx-auto flex w-full max-w-[1400px] flex-col gap-16 px-4 py-20 sm:px-8 sm:py-24 lg:gap-20 lg:px-20 lg:py-28">
-        <div className="flex flex-col gap-7">
-          <div className="inline-flex w-fit items-center gap-2 self-start rounded-sm bg-white/10 px-3.5 py-1.5 font-mono text-base tracking-tight text-white">
-            <span aria-hidden className="block h-2 w-2 shrink-0 rounded-[1px] bg-white/85" />
+    <section className="relative w-full overflow-hidden bg-[#050170]">
+      <div className="relative mx-auto flex w-full max-w-350 flex-col gap-16 px-4 py-20 sm:px-8 sm:py-24 lg:gap-24 lg:px-20 lg:py-25">
+        <div className="flex flex-col gap-6 lg:pl-5">
+          <div className="inline-flex w-fit items-center gap-3 self-start bg-white/10 px-3.5 py-1.5 text-sm leading-[1.6] tracking-[-0.02em] text-white">
+            <span
+              aria-hidden
+              className="block h-2.5 w-2.5 shrink-0 rounded-[1px] bg-white/80"
+            />
             What clients experience
           </div>
 
-          <h2 className="max-w-[20ch] text-4xl font-medium leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+          <h2 className="max-w-[20ch] text-4xl font-medium leading-tight tracking-tight text-white sm:text-5xl lg:text-[56px] lg:leading-[60px]">
             What changes inside the business and how fast.
           </h2>
         </div>
 
-        <div className="rounded-sm border border-white/15 bg-[#F7F6F5]/10 backdrop-blur-md">
+        <div className="rounded-[4px] bg-white/10">
           <div className="grid w-full grid-cols-1 sm:grid-cols-2">
             {OUTCOMES.map((o) => (
               <article
                 key={o.title}
-                className="flex flex-col gap-8 border-white/15 p-8 sm:p-12 min-h-[260px] sm:min-h-[330px] [&:not(:first-child)]:border-t sm:[&:nth-child(2n)]:border-l sm:[&:nth-child(2)]:border-t-0"
+                className="flex min-h-65 flex-col justify-between gap-8 border-white/15 p-8 sm:min-h-80 sm:p-10 [&:not(:first-child)]:border-t sm:[&:nth-child(2)]:border-t-0 sm:[&:nth-child(2n)]:border-l"
               >
-                <div className="inline-flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-sm bg-white/10 text-white mb-2">
+                <div className="inline-flex h-12 w-12 items-center justify-center rounded-[4px] bg-white/20 text-white sm:h-14 sm:w-14">
                   {o.icon}
                 </div>
 
-                <div className="flex flex-col gap-4 flex-1 justify-center">
-                  <h3 className="text-2xl font-medium leading-tight tracking-tight text-white sm:text-3xl">
+                <div className="flex flex-col gap-4">
+                  <h3 className="text-2xl font-medium leading-tight tracking-[-0.02em] text-white">
                     {o.title}
                   </h3>
-                  <p className="text-base font-light leading-relaxed text-white/70 sm:text-lg">
+                  <p className="text-base leading-relaxed text-white/70">
                     {o.description}
                   </p>
                 </div>
