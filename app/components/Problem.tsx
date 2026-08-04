@@ -2,7 +2,7 @@ import SectionTag from "./SectionTag";
 
 const CARDS = [
   {
-    text: "Every deal feels like starting from scratch.",
+    text: "No proven sales operations for efficient scaling, freeing you from daily tasks.",
     icon: (
       <>
         <path d="M12 20h9" />
@@ -11,11 +11,11 @@ const CARDS = [
     ),
   },
   {
-    text: "More leads won't fix a bucket full of holes.",
+    text: "Many opportunities exist, but consistently landing clients can be challenging.",
     icon: <path d="M3 4h18l-7 9v6l-4 2v-8Z" />,
   },
   {
-    text: "Your team is busy. But the numbers aren't moving.",
+    text: "Relying on a few individuals instead of a proven process; if they leave, sales go too.",
     icon: <path d="M6 20V10M12 20V4M18 20v-6" />,
   },
 ];
@@ -27,10 +27,10 @@ export default function Problem() {
         <SectionTag>The Problem</SectionTag>
 
         <h2 className="mt-10 max-w-[1080px] text-center text-[clamp(2.75rem,6.8vw,88px)] leading-[1.05] tracking-[-3px] text-ink">
-          <span className="inline-block bg-brand-orange px-5 text-white">
-            Growth has slowed
+          <span className="inline-block bg-[#003CFC] px-5 text-white">
+            Sales is holding you back
           </span>{" "}
-          but not because of demand.
+          when it should be driving you forward
         </h2>
 
         <div className="mt-20 flex items-center gap-5 self-start font-mono text-[16px] tracking-[0.04em] text-ink sm:mt-28">

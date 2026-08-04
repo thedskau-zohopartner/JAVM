@@ -6,24 +6,32 @@ import SectionTag from "./SectionTag";
 
 const STEP_DURATION_MS = 10000;
 
-type Step = { title: string; sub: string };
+type Step = { title: string; sub: string; image: string; imageAlt: string };
 
 const STEPS: Step[] = [
   {
     title: "Identify what's holding sales back, and what needs to be in place.",
-    sub: "We deep dive into your current sales metrics, process and performance to identify what is holding your growth back with precision.",
+    sub: "We deep dive into your current sales metrics, process, management & team skills to identify what's holding growth back.",
+    image: "/what-we-actually-do/right-graph-image.png",
+    imageAlt: "Identifying revenue bottlenecks, pipeline gaps and blind spots",
   },
   {
     title: "Create a customized strategy based on your sales process that can boost revenue.",
-    sub: "We strategise and design a tailored sales solution based on your needs to bring you the clarity and renewed excitement for your business future.",
+    sub: "We digest the information gathered, strategise a tailored strategic and operational roadmap to fix the biggest bottlenecks affecting your sales growth.",
+    image: "/what-we-actually-do/2nd.png",
+    imageAlt: "Commercial audit layered into a growth strategy and roadmap",
   },
   {
     title: "Build the system frameworks and operations for growth.",
-    sub: "We use the tailored plan and go into the mechanic shed to build you the exact system, frameworks and SOP's your business needs to have a sales engine that drives revenue growth.",
+    sub: "We take the how off your hands and build the key operational inputs, frameworks and assets needed for your success.",
+    image: "/what-we-actually-do/3rd.png",
+    imageAlt: "Systems, operations, frameworks, KPIs, management and training modules",
   },
   {
     title: "Implement, upskill and manage for success.",
-    sub: "We implement what's been built into the business, upskill you and your staff & provide ongoing support to ensure maximum process adoption and performance progress. Simply said, we manage your business growth!",
+    sub: "We work with you to implement, upskill, and project manage all deliverables into your sales process to achieve team adoption and long-term growth.",
+    image: "/what-we-actually-do/4th.png",
+    imageAlt: "Implementing the roadmap, upskilling and project managing growth",
   },
 ];
 
@@ -69,14 +77,11 @@ export default function WhatWeActuallyDo() {
 
           <div className="grid w-full grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_44%] lg:gap-12">
             <h2 className="mx-auto w-[min(70ch,100%)] text-[44px] font-medium leading-[1.1] tracking-[-1.4px] text-white sm:text-5xl lg:mx-0 lg:text-6xl lg:font-normal lg:tracking-[-2.4px]">
-              We don&apos;t advise. We{" "}
-              <span className="hidden lg:box-decoration-clone lg:inline lg:rounded-[1px] lg:bg-[#cff0ff] lg:px-4 lg:text-ink">
-                build and<br />run the system.
-              </span>
-              <span className="mt-2 flex w-full flex-col items-center gap-2 lg:hidden">
-                <span className="w-full rounded-[1px] bg-[#cff0ff] py-1 text-center text-ink">build and</span>
-                <span className="w-full rounded-[1px] bg-[#cff0ff] py-1 text-center text-ink">run the system.</span>
-              </span>
+              We take the{" "}
+              <span className="box-decoration-clone rounded-[1px] bg-[#cff0ff] px-3 text-ink lg:px-4">
+                hassle out
+              </span>{" "}
+              of your growth
             </h2>
 
             <Image
@@ -141,10 +146,10 @@ export default function WhatWeActuallyDo() {
                     <div className="overflow-hidden">
                       <div className="flex w-full justify-center">
                         <Image
-                          src="/what-we-actually-do/right-graph-image.png"
-                          alt="Diagnose pipeline gaps and reveal blind spots visualization"
-                          width={620}
-                          height={420}
+                          src={step.image}
+                          alt={step.imageAlt}
+                          width={514}
+                          height={500}
                           className="block h-auto w-full max-w-[420px]"
                         />
                       </div>
@@ -161,14 +166,20 @@ export default function WhatWeActuallyDo() {
             })}
           </ol>
 
-          <div className="hidden lg:block">
-            <Image
-              src="/what-we-actually-do/right-graph-image.png"
-              alt="Diagnose pipeline gaps and reveal blind spots visualization"
-              width={620}
-              height={420}
-              className="block h-auto w-full"
-            />
+          <div className="relative hidden aspect-[514/500] w-full lg:block">
+            {STEPS.map((step, idx) => (
+              <Image
+                key={step.image}
+                src={step.image}
+                alt={step.imageAlt}
+                width={514}
+                height={500}
+                aria-hidden={idx !== activeIndex}
+                className={`absolute inset-0 h-full w-full object-contain transition-[opacity,transform] duration-700 ease-out motion-reduce:transition-none ${
+                  idx === activeIndex ? "opacity-100 scale-100" : "opacity-0 scale-[0.98]"
+                }`}
+              />
+            ))}
           </div>
         </div>
       </div>

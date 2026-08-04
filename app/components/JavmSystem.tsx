@@ -34,7 +34,7 @@ const CARDS: Card[] = [
   },
   {
     title: "Pipeline",
-    desc: "Build foundational prospecting systems that will have your pipeline overflowing with cash, ready to be collected.",
+    desc: "Have a repeatable strategy and process to proactively find, reach out and bring leads into your sales pipeline.",
     icon: (
       <svg
         width="24"
@@ -52,7 +52,7 @@ const CARDS: Card[] = [
   },
   {
     title: "Process",
-    desc: "A sales process that builds scalable revenue, makes upskilling & managing the team easy.",
+    desc: "Build and standardised the correct sales operations into your business, giving you and the team all the resources need for success.",
     icon: (
       <svg
         width="24"
@@ -69,8 +69,8 @@ const CARDS: Card[] = [
     ),
   },
   {
-    title: "Pricing",
-    desc: "Embedded backend sales strategies proven to increase client lifetime value & retention.",
+    title: "Price",
+    desc: "Maximising client lifetime value through implementing tailored cross-sell & upsell initiatives.",
     icon: (
       <svg
         width="24"

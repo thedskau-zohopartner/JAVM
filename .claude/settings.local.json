@@ -15,7 +15,13 @@
       "Bash(npx tsc *)",
       "Read(//tmp/**)",
       "Bash(node *)",
-      "Bash(git *)"
+      "Bash(git *)",
+      "Bash(npx next *)",
+      "Bash(npm install *)",
+      "Bash(grep -o \"Your sales aren.\\\\{0,40\\\\}\")",
+      "Bash(grep -o \"hassle out\\\\|We take the how off your hands[^\\\\\\\\\\\\\\\\\\\\\"<]*\\\\|We digest the information[^\\\\\\\\\\\\\\\\\\\\\"<]*\\\\|2nd.png\\\\|3rd.png\\\\|4th.png\" /tmp/hp.html)",
+      "Bash(grep -o \"Have a repeatable strategy[^\\\\\\\\\\\\\\\\\\\\\"<]*\\\\|Build and standardised[^\\\\\\\\\\\\\\\\\\\\\"<]*\\\\|Maximising client lifetime[^\\\\\\\\\\\\\\\\\\\\\"<]*\\\\|>Price<\")",
+      "Bash(grep -o \"Sales system build\\\\|Operational Management\\\\|We conduct a sales function audit[^\\\\\\\\\\\\\\\\\\\\\"<]*\\\\|We build the key inputs[^\\\\\\\\\\\\\\\\\\\\\"<]*\\\\|We implement deliverables[^\\\\\\\\\\\\\\\\\\\\\"<]*\")"
     ]
   }
 }

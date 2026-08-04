@@ -15,7 +15,7 @@ const STEPS: Step[] = [
   {
     label: "STEP 01",
     title: "Sales Process Diagnostic",
-    desc: "We assess the current sales performance, team execution & operational blind spots",
+    desc: "We conduct a sales function audit & build an execution roadmap to identify current sales constraints & provide a tailored solution.",
     icon: (
       <svg
         width="28"
@@ -37,8 +37,8 @@ const STEPS: Step[] = [
   },
   {
     label: "STEP 02",
-    title: "Sales inputs build",
-    desc: "We design, build & install the correct sales system, tailored to your business needs.",
+    title: "Sales system build",
+    desc: "We build the key inputs & operations needed to successfully implement the roadmap.",
     icon: (
       <svg
         width="28"
@@ -61,7 +61,7 @@ const STEPS: Step[] = [
   {
     label: "STEP 03",
     title: "System Implementation",
-    desc: "Implement new sales inputs to ensure long-term operational adoption and growth.",
+    desc: "We implement deliverables & project manage outcomes to ensure strategic & operational adoption occurs.",
     icon: (
       <svg
         width="28"
@@ -80,7 +80,7 @@ const STEPS: Step[] = [
   },
   {
     label: "STEP 04",
-    title: "Operational Support",
+    title: "Operational Management",
     desc: "We work alongside leadership to ensure the system runs consistently and continues improving.",
     icon: (
       <svg

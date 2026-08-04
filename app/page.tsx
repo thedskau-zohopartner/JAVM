@@ -12,7 +12,9 @@ import FAQ from "./components/FAQ";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-ink">
-      <Nav />
+      <div className="bg-[#050170]">
+        <Nav transparent darkBg />
+      </div>
       <Hero />
       <Problem />
       <WhatWeActuallyDo />
