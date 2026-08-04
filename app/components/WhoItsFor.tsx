@@ -59,9 +59,9 @@ export default function WhoItsFor() {
 
         <button
           type="button"
-          className="mt-2 inline-flex items-center gap-3 bg-white px-7 py-4 font-mono text-[14px] tracking-[0.08em] text-ink transition hover:bg-gray-100 active:scale-[0.98] sm:text-[15px]"
+          className="mt-2 inline-flex items-center gap-3 bg-white px-7 py-4 font-mono text-[14px] tracking-[0.08em] text-black transition hover:bg-gray-100 active:scale-[0.98] sm:text-[15px]"
         >
-          BOOK A CONSULTATION CALL
+          BOOK A DIAGNOSTIC CALL
           <svg
             width="18"
             height="14"

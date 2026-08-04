@@ -8,6 +8,8 @@ import HowWeWork from "./components/HowWeWork";
 import CaseStudy from "./components/CaseStudy";
 import WhoItsFor from "./components/WhoItsFor";
 import FAQ from "./components/FAQ";
+import FinalCTA from "./components/FinalCTA";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -24,6 +26,8 @@ export default function Home() {
       <CaseStudy />
       <WhoItsFor />
       <FAQ />
+      <FinalCTA />
+      <Footer />
     </main>
   );
 }

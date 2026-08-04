@@ -176,10 +176,11 @@ export default function FAQ() {
           </div>
         </div>
 
-        <div className="mt-4 flex flex-wrap items-center justify-center gap-4">
+        {/* desktop CTA lives in FinalCTA; keep these for mobile only */}
+        <div className="mt-4 flex w-full flex-col gap-4 lg:hidden">
           <button
             type="button"
-            className="inline-flex items-center gap-3 bg-brand-orange px-7 py-4 font-mono text-[14px] tracking-[0.08em] text-white transition hover:bg-[#e02e1c] active:scale-[0.98] sm:text-[15px]"
+            className="flex w-full items-center justify-center gap-3 bg-brand-orange px-7 py-4 font-mono text-[14px] tracking-[0.08em] text-white transition hover:bg-[#e02e1c] active:scale-[0.98] sm:text-[15px]"
           >
             <span aria-hidden className="text-[15px]">
               ⌘
@@ -188,7 +189,7 @@ export default function FAQ() {
           </button>
           <button
             type="button"
-            className="inline-flex items-center gap-3 border border-ink/15 bg-white px-7 py-4 font-mono text-[14px] tracking-[0.08em] text-ink transition hover:bg-ink/[0.03] active:scale-[0.98] sm:text-[15px]"
+            className="flex w-full items-center justify-center gap-3 border border-ink/15 bg-white px-7 py-4 font-mono text-[14px] tracking-[0.08em] text-ink transition hover:bg-ink/[0.03] active:scale-[0.98] sm:text-[15px]"
           >
             SEE HOW WE WORK
           </button>

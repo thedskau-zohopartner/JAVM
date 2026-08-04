@@ -35,8 +35,8 @@ const STATS: Stat[] = [
 
 export default function CaseStudy() {
   return (
-    <section className="relative w-full bg-white px-6 py-24 text-ink sm:px-12 sm:py-32 md:px-20 lg:px-32 lg:py-32 xl:px-48">
-      <div className="flex w-full flex-col gap-14">
+    <section className="relative w-full bg-white px-4 pt-15 pb-37.5 text-ink sm:px-12 sm:py-32 md:px-20 lg:px-32 lg:py-32 xl:px-48">
+      <div className="flex w-full flex-col gap-6 lg:gap-14">
         <div className="flex items-center justify-between gap-6">
           <SectionTag variant="light">Case Study</SectionTag>
           <Image
@@ -48,10 +48,12 @@ export default function CaseStudy() {
           />
         </div>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-[1fr_auto] md:items-end md:gap-10">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-[1fr_auto] md:items-end md:gap-10">
           <div className="flex items-end gap-3 sm:gap-4 md:gap-6">
-            <h2 className="text-[40px] font-medium leading-[1.05] sm:text-5xl md:text-6xl">
-              <span className="text-ink/35">Real businesses.</span>
+            <h2 className="text-[40px] font-medium leading-[50px] tracking-[-0.03em] sm:text-5xl md:text-6xl lg:leading-[1.05] lg:tracking-normal">
+              <span className="text-[#080808]/60 lg:text-ink/35">
+                Real businesses.
+              </span>
               <br />
               <span className="text-ink">Measurable growth.</span>
             </h2>
@@ -65,17 +67,17 @@ export default function CaseStudy() {
             />
           </div>
 
-          <div className="flex flex-col items-start gap-5">
+          <div className="flex flex-col items-start gap-6 md:gap-5">
             <Image
               src="/LevLogisticsCaseStudy.png"
               alt="Lev Logistics"
               width={220}
               height={44}
-              className="block h-10 w-auto max-w-none md:hidden"
+              className="block h-9.25 w-auto max-w-none md:hidden"
             />
             <button
               type="button"
-              className="flex w-full shrink-0 items-center justify-center gap-3 bg-brand-orange px-6 py-4 font-mono text-[14px] tracking-[0.08em] text-white transition hover:bg-[#e02e1c] active:scale-[0.98] sm:text-[15px] md:inline-flex md:w-fit md:justify-start"
+              className="flex h-12.25 w-full shrink-0 items-center justify-center gap-3 rounded-xs bg-[#EC3B0D] px-6.5 font-mono text-sm font-bold uppercase leading-[17px] tracking-normal text-white transition hover:bg-[#d43509] active:scale-[0.98] md:inline-flex md:h-auto md:w-fit md:justify-start md:rounded-none md:bg-brand-orange md:px-6 md:py-4 md:text-[15px] md:tracking-[0.08em] md:hover:bg-[#e02e1c]"
             >
               READ FULL CASE STUDY
               <svg
@@ -96,92 +98,92 @@ export default function CaseStudy() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 items-stretch gap-10 md:grid-cols-[minmax(0,420px)_1fr] md:gap-12 lg:gap-16">
-          <article className="relative flex flex-col gap-8 rounded-sm border-t-[3px] border-[#000625] bg-[#CFE3F5] p-8 sm:p-10">
-            <Image
-              src="/%E2%80%9C.svg"
-              alt=""
-              width={28}
-              height={21}
-              aria-hidden
-              className="h-auto w-7"
-            />
-
-            <div className="flex flex-col gap-5 text-[18px] font-medium leading-[1.55] tracking-[-0.1px] text-ink sm:text-xl">
-              <p>
-                JAVM Partners transformed our sales approach. They didn&apos;t
-                just make minor adjustments, they created a strategic process
-                that set us apart from competitors.
-              </p>
-              <p>
-                They established the operational foundation we needed, helping
-                us generate $250k in new revenue within the first 3 months.
-              </p>
-            </div>
-
-            <div className="mt-auto flex items-center gap-4 pt-4">
+        <div className="flex flex-col gap-5 lg:gap-14">
+          <article className="relative flex flex-col-reverse gap-5 rounded-md bg-[#CADEFF] p-3.5 lg:flex-row lg:items-start lg:gap-10 lg:bg-[#CFE3F5] lg:p-10">
+            <div className="relative h-110.75 w-full shrink-0 overflow-hidden rounded-sm bg-[#F7F7F5] lg:h-100 lg:w-74">
               {/*add no optimization to this image*/}
               <Image
                 src="/KOSTA.png"
                 alt="Kosta"
-                width={2240}
-                height={2240}
+                fill
+                sizes="(min-width: 1024px) 296px, 100vw"
                 quality={100}
                 unoptimized
-                className="h-18 w-18 rounded-sm object-cover"
+                className="object-cover object-top"
               />
-              <div className="flex flex-col gap-1">
-                <span className="text-lg font-medium leading-tight text-ink">
-                  Kosta
-                </span>
-                <span className="text-[17px] text-ink/65">
+              <div
+                aria-hidden
+                className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_50%,rgba(0,0,0,0.7)_78.44%)] lg:hidden"
+              />
+              <p className="absolute inset-x-6.75 bottom-6.5 text-[20px] font-bold leading-[1.2] tracking-[-0.02em] text-white lg:hidden">
+                Kosta
+                <br />
+                Director at Lev Logistics
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-4.5 px-1.5 py-2.5 lg:h-100 lg:w-212 lg:justify-between lg:gap-0 lg:px-0 lg:py-4">
+              <Image
+                src="/%E2%80%9C.svg"
+                alt=""
+                width={28}
+                height={21}
+                aria-hidden
+                className="h-auto w-5.25 lg:w-7"
+              />
+
+              <div className="flex flex-col gap-6.5 text-lg font-medium leading-[26px] tracking-[-0.03em] text-[#000625] lg:gap-8 lg:min-h-48 lg:text-2xl lg:leading-8">
+                <p>
+                  JAVM Partners transformed the chaos of our inconsistent sales
+                  into building us the right sales operations with structure
+                  that we can follow. They provided the support and
+                  accountability we needed to build supercharged momentum.
+                </p>
+                <p>
+                  We went from doing $300K to doing $600K per month with JAVM,
+                  and we&rsquo;re looking to do 1 million per month next.
+                </p>
+              </div>
+
+              <div className="hidden h-12 w-67 max-w-full flex-col justify-end text-xl font-bold leading-[1.2] tracking-[-0.02em] text-[#000625] lg:flex">
+                <span>Kosta</span>
+                <span className="text-[#000625]/65">
                   Director at Lev Logistics
                 </span>
               </div>
             </div>
           </article>
 
-          <div className="flex items-center justify-end">
-            <Image
-              src="/CaseStudySectionGraph.png"
-              alt="Pipeline visibility after system implementation"
-              width={760}
-              height={510}
-              unoptimized
-              className="h-auto w-full max-w-[850px]"
-            />
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {STATS.map((stat) => (
+              <article
+                key={stat.label}
+                className="flex h-62.5 flex-col justify-between rounded-md bg-[#F3F4EE] p-5 sm:h-auto sm:min-h-90 sm:p-8"
+              >
+                <header className="flex items-start justify-between gap-6">
+                  <p className="font-mono text-[15px] uppercase leading-[22px] text-[#000625] sm:max-w-[90%] sm:text-xl sm:leading-[1.1] sm:tracking-tight sm:text-ink">
+                    {stat.label}
+                  </p>
+                  <Image
+                    src={stat.logo}
+                    alt={stat.logoAlt}
+                    width={120}
+                    height={24}
+                    className="hidden h-6 w-auto max-w-none shrink-0 sm:block"
+                  />
+                </header>
+
+                <div className="flex items-baseline gap-2">
+                  <span className="text-[65.52px] font-medium leading-[86px] tracking-[-0.04em] text-[#0B1956] sm:text-7xl sm:leading-[0.9] sm:tracking-[-2px] lg:text-9xl">
+                    {stat.value}
+                  </span>
+                  <span className="text-[40px] font-medium leading-10 text-[#0B1956]/50 sm:text-6xl sm:font-semibold sm:text-[#7E86A2]">
+                    {stat.unit}
+                  </span>
+                </div>
+              </article>
+            ))}
           </div>
-        </div>
-
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {STATS.map((stat) => (
-            <article
-              key={stat.label}
-              className="flex min-h-[360px] flex-col justify-between rounded-md bg-[#F3F4EE] p-7 sm:p-8"
-            >
-              <header className="flex items-start justify-between gap-6">
-                <p className="max-w-[90%] font-mono text-xl uppercase leading-[1.1] tracking-tight text-ink sm:text-xl">
-                  {stat.label}
-                </p>
-                <Image
-                  src={stat.logo}
-                  alt={stat.logoAlt}
-                  width={120}
-                  height={24}
-                  className="h-6 w-auto max-w-none shrink-0"
-                />
-              </header>
-
-              <div className="flex items-baseline gap-2">
-                <span className="text-7xl font-medium leading-[0.9] tracking-[-2px] text-[#0B1956] sm:text-9xl">
-                  {stat.value}
-                </span>
-                <span className="text-6xl font-semibold text-[#7E86A2] sm:text-6xl">
-                  {stat.unit}
-                </span>
-              </div>
-            </article>
-          ))}
         </div>
       </div>
     </section>

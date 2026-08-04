@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(npx tsc --noEmit -p tsconfig.json)",
+      "Bash(ls -la \"C:\\\\Users\\\\sneha\\\\.claude\\\\image-cache\\\\51b5a118-d4f6-46e1-b7b5-b38b38d2f1b4\")",
+      "Read(//c/Users/sneha/.claude/image-cache/51b5a118-d4f6-46e1-b7b5-b38b38d2f1b4/**)"
+    ]
+  }
+}
