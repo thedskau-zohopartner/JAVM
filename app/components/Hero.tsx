@@ -1,4 +1,5 @@
 import Image from "next/image";
+import DiagnosticIcon from "./DiagnosticIcon";
 import TrustedBy from "./TrustedBy";
 
 function HeroBadge() {
@@ -52,20 +53,7 @@ function HeroCtas() {
         href="#"
         className="inline-flex w-full items-center justify-center gap-3 rounded-[2px] bg-brand-orange px-8 py-[18px] font-mono text-[16px] font-bold uppercase leading-tight tracking-wider text-white shadow-[0_4px_18px_rgba(249,63,40,0.35)] transition-all duration-300 hover:-translate-y-px hover:brightness-110 hover:shadow-[0_6px_24px_rgba(249,63,40,0.45)] lg:w-auto"
       >
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          aria-hidden
-        >
-          <path d="M18 3a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3ZM6 3a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3ZM18 15a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3ZM6 15a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3Z" />
-          <path d="M9 6h6M9 18h6M6 9v6M18 9v6" />
-        </svg>
+        <DiagnosticIcon />
         BOOK A FREE DIAGNOSTIC CALL
       </a>
     </div>
@@ -75,14 +63,15 @@ function HeroCtas() {
 export default function Hero() {
   return (
     <div className="relative flex w-full flex-1 flex-col items-center overflow-x-hidden bg-[#050170]">
-      <div className="relative z-[5] flex max-w-[860px] flex-col items-center gap-7 px-6 pt-14 text-center lg:gap-10 lg:pt-20">
+      <div className="relative z-[5] flex max-w-[920px] flex-col items-center gap-7 px-6 pt-14 text-center lg:gap-10 lg:pt-20">
         <HeroBadge />
 
-        <h1 className="max-w-[840px] animate-fade-in text-[clamp(2.75rem,8vw,96px)] leading-[1] tracking-[-1.8px] text-white [animation-delay:0.25s] lg:tracking-[-3.4px]">
-          Your sales aren&apos;t broken. Your system is!
+        <h1 className="max-w-[920px] animate-fade-in text-8xl leading-[1.05] tracking-[-1.8px] text-white [animation-delay:0.25s] lg:tracking-[-2.4px]">
+          <span className="block lg:whitespace-nowrap">Your sales aren&apos;t broken.</span>
+          <span className="block lg:whitespace-nowrap">Your system is!</span>
         </h1>
 
-        <p className="max-w-[680px] animate-fade-in text-[17px] leading-[1.45] tracking-[-0.18px] text-white/70 [animation-delay:0.4s] lg:text-[22px]">
+        <p className="max-w-[680px] animate-fade-in text-[17px] leading-[1.45] tracking-[-0.18px] text-white/70 font-light [animation-delay:0.4s] lg:text-[22px]">
           We create high-performance sales systems for businesses, making revenue
           predictable and scalable, independent of the founder.
         </p>

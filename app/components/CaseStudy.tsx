@@ -5,8 +5,6 @@ type Stat = {
   label: string;
   value: string;
   unit: string;
-  logo: string;
-  logoAlt: string;
 };
 
 const STATS: Stat[] = [
@@ -14,22 +12,16 @@ const STATS: Stat[] = [
     label: "AVERAGE OPERATIONAL DISCIPLINE CONSISTENCY ACROSS TEAMS",
     value: "92",
     unit: "%",
-    logo: "/Case-Study/square.svg",
-    logoAlt: "Square",
   },
   {
     label: "COST EFFICIENCY COMPARED TO BUILDING AND RUNNING IN-HOUSE",
     value: "1/3",
     unit: "cost",
-    logo: "/Case-Study/entourage.svg",
-    logoAlt: "Entourage",
   },
   {
     label: "FROM FOUNDER-LED TO SYSTEM-LED",
     value: "120",
     unit: "days",
-    logo: "/Case-Study/makermil.svg",
-    logoAlt: "Maker Mil",
   },
 ];
 
@@ -160,17 +152,10 @@ export default function CaseStudy() {
                 key={stat.label}
                 className="flex h-62.5 flex-col justify-between rounded-md bg-[#F3F4EE] p-5 sm:h-auto sm:min-h-90 sm:p-8"
               >
-                <header className="flex items-start justify-between gap-6">
-                  <p className="font-mono text-[15px] uppercase leading-[22px] text-[#000625] sm:max-w-[90%] sm:text-xl sm:leading-[1.1] sm:tracking-tight sm:text-ink">
+                <header>
+                  <p className="font-mono text-[15px] uppercase leading-[22px] text-[#000625] sm:text-xl sm:leading-[1.1] sm:tracking-tight sm:text-ink">
                     {stat.label}
                   </p>
-                  <Image
-                    src={stat.logo}
-                    alt={stat.logoAlt}
-                    width={120}
-                    height={24}
-                    className="hidden h-6 w-auto max-w-none shrink-0 sm:block"
-                  />
                 </header>
 
                 <div className="flex items-baseline gap-2">

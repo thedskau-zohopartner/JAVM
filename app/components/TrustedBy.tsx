@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const LOGOS = [
+const LOGOS: { src: string; alt: string; className?: string }[] = [
   { src: "/logo-strip/LevLogistics.svg", alt: "Lev Logistics" },
   { src: "/logo-strip/Glydepath.svg", alt: "Glydepath" },
   { src: "/logo-strip/stadiumfitness.svg", alt: "Stadium Fitness" },
@@ -8,7 +8,11 @@ const LOGOS = [
   { src: "/logo-strip/cybernode.svg", alt: "Cybernode" },
   { src: "/logo-strip/thecybercollective.svg", alt: "The Cyber Collective" },
   { src: "/logo-strip/guardianone.svg", alt: "Guardian One" },
-  { src: "/logo-strip/hakeaprojects.svg", alt: "Hakea Projects" },
+  { src: "/logo-strip/hakeaprojects.svg", alt: "Hakea Projects", className: "h-10 lg:h-[68px]" },
+  { src: "/logo-strip/beam-automation.svg", alt: "Beam Automation" },
+  { src: "/logo-strip/camex.svg", alt: "Camex" },
+  { src: "/logo-strip/covet.svg", alt: "Covet" },
+  { src: "/logo-strip/f.svg", alt: "F" },
 ];
 
 function Divider() {
@@ -46,7 +50,7 @@ export default function TrustedBy() {
                   alt={logo.alt}
                   width={140}
                   height={40}
-                  className="h-7 w-auto shrink-0 object-contain opacity-95 transition-opacity hover:opacity-100 lg:h-12"
+                  className={`w-auto shrink-0 object-contain opacity-95 transition-opacity hover:opacity-100 ${logo.className ?? "h-7 lg:h-12"}`}
                 />
               ))}
             </div>

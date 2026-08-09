@@ -1,3 +1,4 @@
+import DiagnosticIcon from "./DiagnosticIcon";
 import SectionTag from "./SectionTag";
 
 export default function HowItWorksHero() {
@@ -51,21 +52,7 @@ export default function HowItWorksHero() {
           href="#"
           className="flex h-12.25 w-full items-center justify-center gap-3 rounded-xs bg-white px-6.5 font-mono text-sm font-bold uppercase leading-[17px] text-black transition hover:bg-gray-100 active:scale-[0.99] lg:hidden"
         >
-          <svg
-            width="14"
-            height="14"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.25"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden
-            className="shrink-0"
-          >
-            <path d="M18 3a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3ZM6 3a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3ZM18 15a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3ZM6 15a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3Z" />
-            <path d="M9 6h6M9 18h6M6 9v6M18 9v6" />
-          </svg>
+          <DiagnosticIcon className="shrink-0" />
           Book a free diagnostic call
         </a>
       </div>
