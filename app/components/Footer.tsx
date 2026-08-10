@@ -64,7 +64,11 @@ function FooterRow({ link }: { link: FooterLink }) {
   );
 }
 
-export default function Footer() {
+export default function Footer({
+  tagline = "The platform behind modern support teams.",
+}: {
+  tagline?: React.ReactNode;
+}) {
   return (
     <footer className="relative w-full overflow-hidden bg-[#050170] pt-12.5 pb-12.5 lg:h-127 lg:pt-22.5 lg:pb-0">
       <div className="flex flex-col gap-12.5 px-4 lg:flex-row lg:justify-between lg:gap-10 lg:px-25">
@@ -77,7 +81,7 @@ export default function Footer() {
             className="h-6 w-auto"
           />
           <p className="text-base leading-[22px] tracking-[-0.6px] text-white/60 lg:w-62.25">
-            The platform behind modern support teams.
+            {tagline}
           </p>
         </div>
 

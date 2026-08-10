@@ -1,10 +1,9 @@
-import Image from "next/image";
 import CommandIcon from "./CommandIcon";
 import TransitionLink from "./TransitionLink";
 
-export default function FinalCTA() {
+export default function AboutCTA() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#050170] px-4 pt-10 pb-0 lg:h-137.5 lg:px-25 lg:pt-24">
+    <section className="relative w-full overflow-hidden bg-[#050170] px-4 py-16 lg:px-25 lg:py-25">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-y-0 right-0 hidden w-140.25 bg-[url('/final-cta-stripes.svg')] bg-right bg-no-repeat lg:block"
@@ -12,19 +11,18 @@ export default function FinalCTA() {
 
       <div
         aria-hidden
-        className="pointer-events-none absolute top-37.5 -left-37.5 h-84.75 w-94.75 bg-[url('/final-cta-stripes.svg')] bg-cover bg-no-repeat lg:hidden"
+        className="pointer-events-none absolute -right-25 -bottom-25 h-84.75 w-94.75 bg-[url('/final-cta-stripes.svg')] bg-cover bg-no-repeat lg:hidden"
       />
 
-      <div className="relative flex flex-col gap-27.5 lg:w-173.75">
+      <div className="relative flex flex-col gap-10 lg:w-173.75 lg:gap-12">
         <div className="flex flex-col gap-4.5">
-          <h2 className="text-5xl font-medium leading-14 tracking-[-0.04em] text-white lg:w-194 lg:max-w-full lg:leading-none">
-            If your revenue is inconsistent, there&apos;s a structural issue.
-            Let&apos;s uncover it.
+          <h2 className="text-[32px] font-medium leading-[1.12] tracking-[-0.04em] text-white sm:text-[40px] lg:w-194 lg:max-w-full lg:text-5xl lg:leading-[1.08]">
+            Are you looking to improve your sales process? Let&rsquo;s uncover
+            the 2-3 biggest constraints that will generate you more revenue.
           </h2>
-          <p className="text-lg font-normal leading-6.5 tracking-[-0.6px] text-white/60 lg:w-141.75 lg:max-w-full">
-            No pitch. No generic advice. Just a direct conversation with
-            operators who&apos;ve seen your problem before and know how to solve
-            it.
+          <p className="text-base font-normal leading-6.5 tracking-[-0.6px] text-white/60 lg:w-141.75 lg:max-w-full lg:text-lg">
+            Just a direct conversation with operators who&rsquo;ve seen your
+            problem before and know how to solve it.
           </p>
         </div>
 
@@ -44,17 +42,6 @@ export default function FinalCTA() {
             See how we work
           </TransitionLink>
         </div>
-      </div>
-
-      <div className="relative -mx-4 mt-12.5 h-72.75 overflow-hidden lg:hidden">
-        <Image
-          src="/final-cta-mobile.png"
-          alt=""
-          aria-hidden
-          fill
-          sizes="100vw"
-          className="object-cover object-right"
-        />
       </div>
     </section>
   );

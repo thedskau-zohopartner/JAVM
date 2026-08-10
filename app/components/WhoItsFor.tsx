@@ -34,7 +34,7 @@ export default function WhoItsFor() {
 
         <h2 className="text-center text-[clamp(2.25rem,5.2vw,72px)] font-medium leading-[1.15] tracking-[-1.5px] text-white">
           JAVM typically partners with
-          <br className="hidden sm:block" /> businesses that
+          <br className="hidden xs:block" /> businesses that
         </h2>
 
         <div className="grid w-full grid-cols-1 gap-5 md:grid-cols-3 md:gap-6">

@@ -1,6 +1,10 @@
 import Nav from "../components/Nav";
 import AboutHero from "../components/AboutHero";
 import OurMission from "../components/OurMission";
+import OurVision from "../components/OurVision";
+import OurLeadership from "../components/OurLeadership";
+import AboutCTA from "../components/AboutCTA";
+import AboutFooter from "../components/AboutFooter";
 
 export default function AboutUs() {
   return (
@@ -18,6 +22,10 @@ export default function AboutUs() {
       />
       <AboutHero />
       <OurMission />
+      <OurVision />
+      <OurLeadership />
+      <AboutCTA />
+      <AboutFooter />
     </main>
   );
 }

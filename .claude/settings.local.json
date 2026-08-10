@@ -24,7 +24,12 @@
       "Bash(grep -o \"Sales system build\\\\|Operational Management\\\\|We conduct a sales function audit[^\\\\\\\\\\\\\\\\\\\\\"<]*\\\\|We build the key inputs[^\\\\\\\\\\\\\\\\\\\\\"<]*\\\\|We implement deliverables[^\\\\\\\\\\\\\\\\\\\\\"<]*\")",
       "PowerShell(npx tsc --noEmit -p tsconfig.json)",
       "Bash(python -)",
-      "Bash(file public/whositfor/*.png)"
+      "Bash(file public/whositfor/*.png)",
+      "PowerShell(npx eslint app/components/WhatClientExperience.tsx)",
+      "PowerShell(npx eslint app/components/AboutHero.tsx)",
+      "PowerShell(npx eslint app/components/OurMission.tsx)",
+      "PowerShell(npx eslint app/components/OurVision.tsx app/components/OurLeadership.tsx app/about-us/page.tsx)",
+      "PowerShell(npx eslint app/components/OurVision.tsx app/components/OurLeadership.tsx)"
     ]
   }
 }

@@ -8,6 +8,7 @@ type Phase = {
   number: string;
   title: string;
   paragraphs: string[];
+  image: string;
 };
 
 const PHASES: Phase[] = [
@@ -18,6 +19,7 @@ const PHASES: Phase[] = [
       "We conduct a deep operational review across your entire sales function, pipeline structure, team execution, CRM systems, conversion performance, reporting, and founder involvement.",
       "The goal is simple to identify what’s slowing growth, what’s creating inconsistency, and where revenue is leaking. From there, we build a clear operational roadmap designed around your next stage of scale.",
     ],
+    image: "/how-it-works/how-we-work-phases/phase1.png",
   },
   {
     number: "Phase 2",
@@ -26,6 +28,7 @@ const PHASES: Phase[] = [
       "Once the gaps are identified, we design and build the systems needed to support scalable revenue growth. This includes sales frameworks, operational processes, reporting structures, scripts, workflows, playbooks, KPIs, and management systems tailored specifically to how your business sells.",
       "Everything is built around one goal: creating predictable revenue without relying on guesswork or founder dependency.",
     ],
+    image: "/how-it-works/how-we-work-phases/phase2.png",
   },
   {
     number: "Phase 3",
@@ -34,6 +37,7 @@ const PHASES: Phase[] = [
       "A system only works if the team actually uses it. We work directly inside the business to roll out the new sales structure, integrate workflows, support the team, and ensure operational adoption across day-to-day execution.",
       "This includes weekly execution sessions, leadership support, process refinement, tactical training, and ongoing implementation guidance.",
     ],
+    image: "/how-it-works/how-we-work-phases/phase3.png",
   },
   {
     number: "Phase 4",
@@ -42,6 +46,7 @@ const PHASES: Phase[] = [
       "Once the system is operational, the focus shifts toward performance, optimisation, and long-term scale. We continuously monitor sales activity, conversion metrics, pipeline movement, and operational performance to improve output over time. The goal is not just building systems, it’s creating a revenue engine that compounds.",
       "JAVM operates as an ongoing growth partner, helping leadership teams make better operational decisions as the business scales.",
     ],
+    image: "/how-it-works/how-we-work-phases/phase4.png",
   },
 ];
 
@@ -206,7 +211,7 @@ export default function HowWeWorkPhases() {
               </div>
               <div className="flex flex-1 items-center justify-center">
                 <Image
-                  src="/how-it-works/Grid.png"
+                  src={phase.image}
                   alt=""
                   width={1300}
                   height={900}

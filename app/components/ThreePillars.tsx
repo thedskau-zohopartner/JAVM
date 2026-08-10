@@ -170,7 +170,7 @@ type Pillar = {
   key: string;
   tag: string;
   title: string;
-  description: string;
+  // description: string;
   icon: ReactNode;
   visual: ReactNode;
   visualHeight: string;
@@ -181,8 +181,8 @@ const PILLARS: Pillar[] = [
     key: "build",
     tag: "Build",
     title: "Sales infrastructure from the ground up",
-    description:
-      "Most businesses have never formally designed their sales process. We fix that. We build the complete operational foundation, from how leads enter the funnel to how deals close, so your team has a system to follow, not just instincts to rely on.",
+    // description:
+    //   "Most businesses have never formally designed their sales process. We fix that. We build the complete operational foundation, from how leads enter the funnel to how deals close, so your team has a system to follow, not just instincts to rely on.",
     icon: (
       <>
         <path d="M9 18h6M10 21.5h4" />
@@ -196,8 +196,8 @@ const PILLARS: Pillar[] = [
     key: "enable",
     tag: "Implementation & Upskill",
     title: "Your team executing the system, consistently",
-    description:
-      "A document doesn’t change behaviour. Weekly execution meetings, tactical training, and live operational support do. We work alongside your team not above them until the system becomes second nature, not an overhead.",
+    // description:
+    //   "A document doesn’t change behaviour. Weekly execution meetings, tactical training, and live operational support do. We work alongside your team not above them until the system becomes second nature, not an overhead.",
     icon: (
       <>
         <path d="M16 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM8 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
@@ -211,8 +211,8 @@ const PILLARS: Pillar[] = [
     key: "manage",
     tag: "Partnership & Operational Management",
     title: "Performance managed, not just measured",
-    description:
-      "Tracking is only useful if someone acts on it. We monitor conversion rates, pipeline quality, and sales cycle velocity, and we make operational decisions based on what the data tells us. Your sales function becomes a managed performance system, not a reactive activity.",
+    // description:
+    //   "Tracking is only useful if someone acts on it. We monitor conversion rates, pipeline quality, and sales cycle velocity, and we make operational decisions based on what the data tells us. Your sales function becomes a managed performance system, not a reactive activity.",
     icon: (
       <>
         <path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z" />
@@ -275,9 +275,9 @@ export default function ThreePillars() {
                       </h3>
                     </div>
 
-                    <p className="text-base leading-6 text-[#080808]/70 lg:w-116 lg:max-w-full">
+                    {/* <p className="text-base leading-6 text-[#080808]/70 lg:w-116 lg:max-w-full">
                       {pillar.description}
-                    </p>
+                    </p> */}
                   </div>
 
                   <div
