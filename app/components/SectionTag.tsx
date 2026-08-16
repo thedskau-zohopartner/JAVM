@@ -1,4 +1,4 @@
-type Variant = "light" | "dark" | "glass";
+type Variant = "light" | "dark" | "glass" | "soft";
 
 type Props = {
   variant?: Variant;
@@ -11,12 +11,14 @@ const TONE: Record<Variant, string> = {
   dark: "gap-2 px-3.5 py-1.5 bg-ink text-xl tracking-[-0.15px] text-white",
   glass:
     "gap-3 px-3 py-1.5 bg-white/10 text-[10px] leading-[1.6] tracking-[-0.01em] text-white lg:gap-4 lg:px-3.5 lg:text-[15px]",
+  soft: "gap-3 px-3.5 py-1.5 bg-[#F3F4EE] text-sm font-medium leading-[1.6] tracking-[-0.02em] capitalize text-[#3D3D41]",
 };
 
 const DOT: Record<Variant, string> = {
   light: "h-2 w-2 bg-ink",
   dark: "h-2 w-2 bg-white/85",
   glass: "h-2.5 w-2.5 bg-white/80",
+  soft: "h-2.5 w-2.5 bg-ink/80",
 };
 
 export default function SectionTag({ variant = "light", className = "", children }: Props) {

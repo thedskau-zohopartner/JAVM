@@ -17,7 +17,7 @@ export default function AboutUs() {
           { label: "Home", href: "/" },
           { label: "How It Works", href: "/how-it-works" },
           { label: "About", href: "/about-us" },
-          { label: "Case Studies", href: "#", hasDropdown: true },
+          { label: "Case Studies", href: "/case-study", hasDropdown: true },
         ]}
       />
       <AboutHero />

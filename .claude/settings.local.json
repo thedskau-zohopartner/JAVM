@@ -29,7 +29,30 @@
       "PowerShell(npx eslint app/components/AboutHero.tsx)",
       "PowerShell(npx eslint app/components/OurMission.tsx)",
       "PowerShell(npx eslint app/components/OurVision.tsx app/components/OurLeadership.tsx app/about-us/page.tsx)",
-      "PowerShell(npx eslint app/components/OurVision.tsx app/components/OurLeadership.tsx)"
+      "PowerShell(npx eslint app/components/OurVision.tsx app/components/OurLeadership.tsx)",
+      "PowerShell(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\amayt\\\\OneDrive\\\\Desktop\\\\work_in_prog\\\\javm-web\\\\crop.ps1\")",
+      "PowerShell(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\amayt\\\\OneDrive\\\\Desktop\\\\work_in_prog\\\\javm-web\\\\crop.ps1\" | Out-String -Width 4000)",
+      "PowerShell(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\amayt\\\\OneDrive\\\\Desktop\\\\work_in_prog\\\\javm-web\\\\crop.ps1\" | Out-String -Width 6000)",
+      "PowerShell(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\amayt\\\\OneDrive\\\\Desktop\\\\work_in_prog\\\\javm-web\\\\inspect.ps1\" | Out-String -Width 4000)",
+      "PowerShell(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\amayt\\\\OneDrive\\\\Desktop\\\\work_in_prog\\\\javm-web\\\\inspect.ps1\")",
+      "Bash(read c *)",
+      "WebSearch",
+      "WebFetch(domain:registry.npmjs.org)",
+      "WebFetch(domain:www.sanity.io)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(npx sanity *)",
+      "Bash(npm view *)",
+      "Bash(npx eslint *)",
+      "Bash(nvm list *)",
+      "Bash(nvm use *)",
+      "Bash(npm -v)",
+      "Bash(echo \"exit=$?\")",
+      "Bash(grep -oE \"Missing environment variable[^<\\\\\"]*|Error: [^<\\\\\"]{0,200}\" /tmp/studio.html)",
+      "Read(//c/c/Users/amayt/OneDrive/Desktop/work_in_prog/javm-web/node_modules/**)",
+      "Read(//c/c/Users/amayt/OneDrive/Desktop/work_in_prog/javm-web/node_modules/next-sanity/**)",
+      "Bash(grep -o \"stalled to revenue growth[^\\\\\"<\\\\\\\\\\\\\\\\]*\" cs2.html)",
+      "Bash(grep -o \"text-\\\\[18px\\\\] font-light[^\\\\\"\\\\\\\\\\\\\\\\]*\" d5.html)",
+      "Bash(grep -o \"h-14 w-36 shrink-0 rounded-sm[^\\\\\"\\\\\\\\\\\\\\\\]*\" d6.html)"
     ]
   }
 }

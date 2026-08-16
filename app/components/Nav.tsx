@@ -22,7 +22,7 @@ type NavProps = {
 const DEFAULT_LINKS: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "How It Works", href: "/how-it-works" },
-  { label: "Customer Stories", href: "#" },
+  { label: "Customer Stories", href: "/case-study" },
   { label: "About", href: "/about-us" },
 ];
 
