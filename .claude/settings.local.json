@@ -52,7 +52,18 @@
       "Read(//c/c/Users/amayt/OneDrive/Desktop/work_in_prog/javm-web/node_modules/next-sanity/**)",
       "Bash(grep -o \"stalled to revenue growth[^\\\\\"<\\\\\\\\\\\\\\\\]*\" cs2.html)",
       "Bash(grep -o \"text-\\\\[18px\\\\] font-light[^\\\\\"\\\\\\\\\\\\\\\\]*\" d5.html)",
-      "Bash(grep -o \"h-14 w-36 shrink-0 rounded-sm[^\\\\\"\\\\\\\\\\\\\\\\]*\" d6.html)"
+      "Bash(grep -o \"h-14 w-36 shrink-0 rounded-sm[^\\\\\"\\\\\\\\\\\\\\\\]*\" d6.html)",
+      "Bash(grep -o 'sm\\\\\\\\:[a-z0-9_-]*' /tmp/app.css)",
+      "Bash(echo \"--- tsc exit: $? ---\")",
+      "Bash(ls -la)",
+      "Bash(cat MEMORY.md)",
+      "Bash(sed -n '255,290p' AboutHero.tsx)",
+      "Bash(sed -n '120,140p' Nav.tsx)",
+      "Bash(sed -n '222,240p' Nav.tsx)",
+      "Bash(sed -n '30,60p' HowItWorksHero.tsx)",
+      "Bash(sed -n '129,148p' Nav.tsx)",
+      "Bash(sed -n '227,250p' Nav.tsx)",
+      "Bash(awk '{print $5, $9}')"
     ]
   }
 }

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import SectionTag from "./SectionTag";
+import TransitionLink from "./TransitionLink";
 
 type FAQ = {
   question: string;
@@ -149,7 +150,7 @@ export default function FAQ() {
       <div className="mx-auto flex w-full max-w-[1300px] flex-col items-center gap-12">
         <SectionTag variant="light">Frequently Asked Questions</SectionTag>
 
-        <h2 className="text-center text-7xl text-ink">
+        <h2 className="text-center text-[40px] text-ink sm:text-6xl lg:text-7xl">
           FAQ&apos;s
         </h2>
 
@@ -178,15 +179,15 @@ export default function FAQ() {
 
         {/* desktop CTA lives in FinalCTA; keep these for mobile only */}
         <div className="mt-4 flex w-full flex-col gap-4 lg:hidden">
-          <button
-            type="button"
+          <TransitionLink
+            href="/contact-us"
             className="flex w-full items-center justify-center gap-3 bg-brand-orange px-7 py-4 font-mono text-[14px] tracking-[0.08em] text-white transition hover:bg-[#e02e1c] active:scale-[0.98] sm:text-[15px]"
           >
             <span aria-hidden className="text-[15px]">
               ⌘
             </span>
             BOOK A DISCOVERY CALL
-          </button>
+          </TransitionLink>
           <button
             type="button"
             className="flex w-full items-center justify-center gap-3 border border-ink/15 bg-white px-7 py-4 font-mono text-[14px] tracking-[0.08em] text-ink transition hover:bg-ink/[0.03] active:scale-[0.98] sm:text-[15px]"

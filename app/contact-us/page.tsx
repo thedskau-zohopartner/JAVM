@@ -1,13 +1,15 @@
 import Nav from "../components/Nav";
-import ContactHero from "../components/ContactHero";
 import BookingSection from "../components/BookingSection";
 import WhatToExpect from "../components/WhatToExpect";
+import ContactForm from "../components/ContactForm";
 import Clients from "../components/Clients";
+import FinalCTA from "../components/FinalCTA";
+import Footer from "../components/Footer";
 
 export default function ContactUs() {
   return (
     <main className="flex min-h-screen flex-col bg-[#ECECEC]">
-      <div className="flex min-h-[60vh] flex-col bg-[#003CFC]">
+      <div className="flex flex-col bg-[#0D0E13]">
         <Nav
           logoSrc="/logo.svg"
           logoClassName="h-6 w-auto sm:h-7"
@@ -20,11 +22,14 @@ export default function ContactUs() {
             { label: "Case Studies", href: "/case-study", hasDropdown: true },
           ]}
         />
-        <ContactHero />
+        <BookingSection />
       </div>
-      <BookingSection />
       <WhatToExpect />
+      
       <Clients variant="light" />
+      <ContactForm />
+      <FinalCTA />
+      <Footer />
     </main>
   );
 }

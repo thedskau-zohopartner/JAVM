@@ -192,7 +192,7 @@ export default function Clients({ variant = "dark" }: { variant?: "dark" | "ligh
         <SectionTag variant={isLight ? "light" : "dark"}>Real Stories From Real Clients</SectionTag>
 
         <div className="flex w-full flex-col items-start gap-6 sm:flex-row sm:items-end sm:justify-between sm:gap-10">
-          <h2 className={`w-[min(80ch,100%)] text-[48px] leading-[1.05] tracking-[-1.8px] sm:text-6xl sm:tracking-[-2.4px] ${
+          <h2 className={`w-[min(80ch,100%)] text-[40px] leading-[1.05] tracking-[-1.2px] sm:text-5xl sm:tracking-[-1.8px] lg:text-6xl lg:tracking-[-2.4px] ${
             isLight ? "text-ink" : "text-white"
           }`}>
             What happens when{" "}
@@ -228,8 +228,8 @@ export default function Clients({ variant = "dark" }: { variant?: "dark" | "ligh
                 key={client.name}
                 onClick={() => setOpenIndex(isExpanded ? null : idx)}
                 aria-expanded={isExpanded}
-                className={`group relative h-[480px] shrink-0 cursor-pointer snap-start overflow-hidden rounded-lg bg-[#050170] transition-[width] duration-500 ease-out ${
-                  isExpanded ? "w-[720px] max-w-[90vw]" : "w-[320px]"
+                className={`group relative h-[520px] shrink-0 cursor-pointer snap-start overflow-hidden rounded-lg bg-[#050170] transition-[width] duration-500 ease-out sm:h-[480px] ${
+                  isExpanded ? "w-[720px] max-w-[90vw]" : "w-[280px] sm:w-[320px]"
                 }`}
               >
                 <div
@@ -253,17 +253,17 @@ export default function Clients({ variant = "dark" }: { variant?: "dark" | "ligh
                     isExpanded ? "opacity-100" : "pointer-events-none opacity-0"
                   }`}
                 >
-                  <div className="relative aspect-[297/399] h-[38%] w-auto shrink-0 self-center overflow-hidden ring-1 ring-white/25 sm:h-full sm:self-auto">
+                  <div className="relative aspect-[297/399] min-h-0 w-auto max-w-full flex-1 self-center overflow-hidden ring-1 ring-white/25 sm:h-full sm:flex-none sm:shrink-0 sm:self-auto">
                     <Image
                       src={`/Clients/${client.file}`}
                       alt={client.fullName}
                       fill
-                      sizes="(max-width: 640px) 140px, 330px"
+                      sizes="(max-width: 640px) 240px, 330px"
                       className="object-cover"
                     />
                   </div>
 
-                  <div className="flex min-w-0 flex-1 flex-col justify-between gap-6 sm:py-1">
+                  <div className="flex min-w-0 shrink-0 flex-col gap-4 sm:flex-1 sm:justify-between sm:gap-6 sm:py-1">
                     <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
                       <span className="font-mono text-[12px] uppercase tracking-[0.08em] text-white sm:text-[14px]">
                         {client.fullName.toUpperCase()}, {client.role.toUpperCase()}
@@ -273,7 +273,7 @@ export default function Clients({ variant = "dark" }: { variant?: "dark" | "ligh
                         alt={client.company}
                         width={160}
                         height={26}
-                        className="h-5 w-auto max-w-none"
+                        className="h-7 w-auto max-w-none sm:h-5"
                       />
                     </div>
 

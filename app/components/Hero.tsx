@@ -1,5 +1,6 @@
 import Image from "next/image";
 import DiagnosticIcon from "./DiagnosticIcon";
+import TransitionLink from "./TransitionLink";
 import TrustedBy from "./TrustedBy";
 
 function HeroBadge() {
@@ -49,13 +50,13 @@ function HeroCtas() {
         SEE HOW WE WORK
       </a>
 
-      <a
-        href="#"
+      <TransitionLink
+        href="/contact-us"
         className="inline-flex w-full items-center justify-center gap-3 rounded-[2px] bg-brand-orange px-8 py-[18px] font-mono text-[16px] font-bold uppercase leading-tight tracking-wider text-white shadow-[0_4px_18px_rgba(249,63,40,0.35)] transition-all duration-300 hover:-translate-y-px hover:brightness-110 hover:shadow-[0_6px_24px_rgba(249,63,40,0.45)] lg:w-auto"
       >
         <DiagnosticIcon />
         BOOK A FREE DIAGNOSTIC CALL
-      </a>
+      </TransitionLink>
     </div>
   );
 }
@@ -66,7 +67,7 @@ export default function Hero() {
       <div className="relative z-[5] flex max-w-[920px] flex-col items-center gap-7 px-6 pt-14 text-center lg:gap-10 lg:pt-20">
         <HeroBadge />
 
-        <h1 className="max-w-[920px] animate-fade-in text-8xl leading-[1.05] tracking-[-1.8px] text-white [animation-delay:0.25s] lg:tracking-[-2.4px]">
+        <h1 className="max-w-[920px] animate-fade-in text-[40px] leading-[1.05] tracking-[-1.2px] text-white [animation-delay:0.25s] sm:text-6xl sm:tracking-[-1.8px] lg:text-8xl lg:tracking-[-2.4px]">
           <span className="block lg:whitespace-nowrap">Your sales aren&apos;t broken.</span>
           <span className="block lg:whitespace-nowrap">Your system is!</span>
         </h1>

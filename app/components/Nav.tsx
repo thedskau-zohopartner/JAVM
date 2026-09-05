@@ -128,7 +128,7 @@ export default function Nav({
         })}
       </ul>
 
-      <a href="#" className={ctaClasses}>
+      <TransitionLink href="/contact-us" className={ctaClasses}>
         BOOK A DISCOVERY CALL
         <svg width="14" height="11" viewBox="0 0 12 9" fill="none" aria-hidden>
           <path
@@ -139,7 +139,7 @@ export default function Nav({
             strokeLinejoin="round"
           />
         </svg>
-      </a>
+      </TransitionLink>
 
       <button
         type="button"
@@ -226,8 +226,8 @@ export default function Nav({
           })}
         </ul>
 
-        <a
-          href="#"
+        <TransitionLink
+          href="/contact-us"
           onClick={() => setOpen(false)}
           className="inline-flex w-fit items-center gap-3 rounded-[2px] bg-white px-6 py-3.5 font-mono text-[16px] font-semibold uppercase tracking-[-0.36px] text-ink transition-all hover:-translate-y-px hover:bg-gray-100"
         >
@@ -241,7 +241,7 @@ export default function Nav({
               strokeLinejoin="round"
             />
           </svg>
-        </a>
+        </TransitionLink>
       </div>
     </nav>
   );

@@ -15,9 +15,9 @@ export default function FinalCTA() {
         className="pointer-events-none absolute top-37.5 -left-37.5 h-84.75 w-94.75 bg-[url('/final-cta-stripes.svg')] bg-cover bg-no-repeat lg:hidden"
       />
 
-      <div className="relative flex flex-col gap-27.5 lg:w-173.75">
+      <div className="relative flex flex-col gap-12 lg:w-173.75 lg:gap-27.5">
         <div className="flex flex-col gap-4.5">
-          <h2 className="text-5xl font-medium leading-14 tracking-[-0.04em] text-white lg:w-194 lg:max-w-full lg:leading-none">
+          <h2 className="text-[32px] font-medium leading-[1.15] tracking-[-0.04em] text-white sm:text-[40px] lg:w-194 lg:max-w-full lg:text-5xl lg:leading-none">
             If your revenue is inconsistent, there&apos;s a structural issue.
             Let&apos;s uncover it.
           </h2>

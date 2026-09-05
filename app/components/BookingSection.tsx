@@ -3,6 +3,7 @@
 import Cal, { getCalApi } from "@calcom/embed-react";
 import { useEffect } from "react";
 import Image from "next/image";
+import SectionTag from "./SectionTag";
 import TrustedBy from "./TrustedBy";
 
 export default function BookingSection() {
@@ -17,27 +18,23 @@ export default function BookingSection() {
     <section className="w-full bg-[#0D0E13]">
       <div className="flex w-full flex-col gap-12 px-4 pb-8 pt-20 sm:px-8 sm:pb-10 sm:pt-24 lg:flex-row lg:items-stretch lg:gap-16 lg:px-20 lg:pb-12 lg:pt-28">
         <div className="flex w-full flex-col justify-between gap-10 lg:w-[45%] lg:shrink-0 lg:gap-16">
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col items-start gap-8">
+            <SectionTag variant="glass">Contact Us</SectionTag>
+
             <h2 className="max-w-[20ch] text-3xl font-normal leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
-              You sense it. We find it. Then we fix it together.
+              The diagnostic your business needs
             </h2>
 
-            <div className="flex flex-col gap-6">
-              <p className="max-w-[56ch] text-base font-light leading-relaxed text-white/60 sm:text-lg">
-                Most founders reach this call with the same feeling, the
-                business is moving, but something&apos;s quietly holding it
-                back. You can&apos;t quite put your finger on it.
-              </p>
-              <p className="max-w-[56ch] text-base font-light leading-relaxed text-white/60 sm:text-lg">
-                That&apos;s exactly where we start. We dig into your business,
-                surface the real constraint most people miss, and then
-                don&apos;t just hand you a roadmap, we build the solution
-                alongside you.
-              </p>
-            </div>
+            <p className="max-w-[56ch] text-base font-light leading-relaxed text-white/60 sm:text-lg">
+              If you&apos;re overwhelmed with messy operations, slow sales
+              performance and lack the time or resources to fix it yourself, we
+              might be exactly the partner for you. Click and book a time for an
+              initial consult so we can understand your constraints, and you can
+              understand exactly how we can help.
+            </p>
           </div>
 
-          <div className="flex items-center gap-8">
+          <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
             <div className="flex items-center gap-3">
               <Image
                 src="/about-us/james-and-jarrod.png"

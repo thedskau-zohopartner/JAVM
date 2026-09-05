@@ -1,5 +1,6 @@
 import Image from "next/image";
 import SectionTag from "./SectionTag";
+import TransitionLink from "./TransitionLink";
 
 type Stat = {
   value: string;
@@ -260,8 +261,8 @@ export default function AboutHero() {
             </p>
           </div>
 
-          <a
-            href="#"
+          <TransitionLink
+            href="/contact-us"
             className="inline-flex w-full max-w-[360px] items-center justify-center gap-3 rounded-[2px] bg-brand-orange px-8 py-[18px] font-mono text-[15px] font-bold uppercase leading-tight tracking-wider text-white shadow-[0_4px_18px_rgba(249,63,40,0.25)] transition-all duration-300 hover:-translate-y-px hover:brightness-110 hover:shadow-[0_6px_24px_rgba(249,63,40,0.35)] sm:text-[16px]"
           >
             <svg
@@ -279,7 +280,7 @@ export default function AboutHero() {
               <path d="M9 6h6M9 18h6M6 9v6M18 9v6" />
             </svg>
             BOOK A DISCOVERY CALL
-          </a>
+          </TransitionLink>
         </div>
       </div>
     </section>

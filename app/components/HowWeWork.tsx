@@ -102,14 +102,14 @@ const STEPS: Step[] = [
 ];
 
 const SECTION_PADDING_X = "px-6 sm:px-12 md:px-20 lg:px-32 xl:px-48";
-const ROW_PADDING_L =
-  "pl-0 sm:pl-12 md:pl-20 lg:pl-[21.125rem] xl:pl-[25.125rem]";
 
-/* one phase per screen on mobile */
+/* the pinned horizontal row only renders at lg and up */
+const ROW_PADDING_L = "pl-[21.125rem] xl:pl-[25.125rem]";
+
 const CARD_WIDTH_CLASSES =
-  "w-screen sm:w-[calc((100vw_-_4.75rem)*0.85/2)] md:w-[calc((100vw_-_6.75rem)*0.85/2)] lg:w-[calc((100vw_-_11.5rem)*0.85/3)] xl:w-[calc((100vw_-_15.5rem)*0.85/3)]";
+  "w-[calc((100vw_-_11.5rem)*0.85/3)] xl:w-[calc((100vw_-_15.5rem)*0.85/3)]";
 
-const ROW_GAP = "gap-0 sm:gap-7";
+const ROW_GAP = "gap-7";
 
 export default function HowWeWork() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -153,14 +153,6 @@ export default function HowWeWork() {
         setStepProgress(Math.min(1, raw - idx));
       } else {
         rowWrap.style.transform = "";
-        const clientWidth = scroller.clientWidth;
-        const contentWidth = scroller.scrollWidth;
-        const maxScroll = Math.max(1, contentWidth - clientWidth);
-        const progress = Math.min(1, Math.max(0, scroller.scrollLeft / maxScroll));
-        const raw = progress * STEPS.length;
-        const idx = Math.min(STEPS.length - 1, Math.floor(raw));
-        setActiveIndex(idx);
-        setStepProgress(Math.min(1, raw - idx));
       }
     };
 
@@ -211,9 +203,37 @@ export default function HowWeWork() {
             </div>
           </div>
 
+          <div className={`flex flex-col gap-10 lg:hidden ${SECTION_PADDING_X}`}>
+            {STEPS.map((step) => (
+              <div key={step.title} className="flex flex-col gap-5">
+                <span className="inline-flex w-fit items-center bg-[#003cfc] px-3.5 py-2 font-mono text-[15px] tracking-[0.04em] text-white">
+                  {step.label}
+                </span>
+
+                <article className="flex flex-col gap-7 rounded-lg border border-white bg-white p-7 text-ink">
+                  <div
+                    aria-hidden
+                    className="inline-flex h-11 w-11 items-center justify-center text-ink"
+                  >
+                    {step.icon}
+                  </div>
+
+                  <div className="flex flex-col gap-4">
+                    <h3 className="text-[24px] font-semibold leading-[1.2] tracking-[-0.3px] text-ink sm:text-[28px]">
+                      {step.title}
+                    </h3>
+                    <p className="text-[16px] leading-[1.5] tracking-[-0.1px] text-ink/70 sm:text-[17px]">
+                      {step.desc}
+                    </p>
+                  </div>
+                </article>
+              </div>
+            ))}
+          </div>
+
           <div
             ref={scrollerRef}
-            className="w-full overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:overflow-x-hidden"
+            className="hidden w-full lg:block lg:overflow-x-hidden"
           >
             <div
               ref={rowWrapRef}
@@ -269,7 +289,7 @@ export default function HowWeWork() {
                   return (
                     <div
                       key={step.label}
-                      className={`flex flex-none flex-col gap-5 px-6 sm:px-0 ${CARD_WIDTH_CLASSES}`}
+                      className={`flex flex-none flex-col gap-5 ${CARD_WIDTH_CLASSES}`}
                     >
                       <div className="flex items-center gap-3">
                         <span

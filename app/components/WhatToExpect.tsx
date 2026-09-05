@@ -2,9 +2,9 @@ import Image from "next/image";
 import SectionTag from "./SectionTag";
 
 const CARDS = [
-  { src: "/contact-us/card 1.png", alt: "The call" },
-  { src: "/contact-us/card 2.png", alt: "The real problem" },
-  { src: "/contact-us/card 3.png", alt: "We build it with you" },
+  { src: "/contact-us/1.png", alt: "The call" },
+  { src: "/contact-us/2.png", alt: "The real problem" },
+  { src: "/contact-us/3.png", alt: "We build it with you" },
 ];
 
 export default function WhatToExpect() {
@@ -33,6 +33,7 @@ export default function WhatToExpect() {
               alt={card.alt}
               width={600}
               height={800}
+              sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
               className="block h-auto w-full rounded-sm"
             />
           ))}

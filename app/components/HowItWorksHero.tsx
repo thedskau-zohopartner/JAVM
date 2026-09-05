@@ -1,5 +1,6 @@
 import DiagnosticIcon from "./DiagnosticIcon";
 import SectionTag from "./SectionTag";
+import TransitionLink from "./TransitionLink";
 
 export default function HowItWorksHero() {
   return (
@@ -48,13 +49,13 @@ export default function HowItWorksHero() {
           </div>
         </div>
 
-        <a
-          href="#"
+        <TransitionLink
+          href="/contact-us"
           className="flex h-12.25 w-full items-center justify-center gap-3 rounded-xs bg-white px-6.5 font-mono text-sm font-bold uppercase leading-[17px] text-black transition hover:bg-gray-100 active:scale-[0.99] lg:hidden"
         >
           <DiagnosticIcon className="shrink-0" />
           Book a free diagnostic call
-        </a>
+        </TransitionLink>
       </div>
     </section>
   );

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import TransitionLink from "./TransitionLink";
 
 type Card = {
   image: string;
@@ -64,8 +65,8 @@ export default function WhoItsFor() {
           ))}
         </div>
 
-        <button
-          type="button"
+        <TransitionLink
+          href="/contact-us"
           className="flex h-12.25 w-full items-center justify-center gap-3 rounded-xs bg-[#EC3B0D] px-6.5 font-mono text-sm font-bold uppercase leading-[17px] text-white transition hover:bg-[#d43509] active:scale-[0.98] sm:w-65"
         >
           Book a diagnostic call
@@ -83,7 +84,7 @@ export default function WhoItsFor() {
             <path d="M5 17l5-5-5-5" />
             <path d="M13 17l5-5-5-5" />
           </svg>
-        </button>
+        </TransitionLink>
       </div>
     </section>
   );
